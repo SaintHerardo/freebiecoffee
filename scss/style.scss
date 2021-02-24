@@ -1,0 +1,39 @@
+@import "./_normalize";
+@import "./vars";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,300&display=swap");
+h1 {
+  font-size: 54px;
+  font-family: "Montserrat";
+}
+h2 {
+  font-size: 30px;
+  font-family: "Montserrat";
+}
+h3 {
+  font-size: 24px;
+  font-family: "Nunito";
+}
+h4 {
+  font-size: 20px;
+  font-family: "Nunito";
+}
+.text {
+  font-size: 16px;
+  font-family: "Nunito";
+}
+.link {
+  font-size: 16px;
+  font-family: "Nunito";
+}
+
+/* Header */
+.header {
+  height: 768px;
+  width: 1400px;
+  background-color: #fff;
+}
+.big-container {
+  height: 768px;
+  width: 1126px;
+}
