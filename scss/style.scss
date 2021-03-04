@@ -5,7 +5,7 @@
 
 body {
   width: 1400px;
-  // margin: 0 auto;
+  margin: 0 auto;
   background-color: #f9fbff;
 }
 h1 {
@@ -43,13 +43,13 @@ h4 {
   font-size: 16px;
   font-family: "Nunito";
   line-height: 22px;
-  letter-spacing: 1px;
 }
 .text--fw {
   font-weight: 700;
 }
 .link {
-  display: inline-block;
+  position: relative;
+  display: block;
   font-size: 16px;
   font-family: "Nunito";
   color: #edf0f5;
@@ -59,6 +59,23 @@ h4 {
   color: $primary-color;
   font-weight: 700;
   padding-top: 2px;
+}
+.link:after {
+  position: relative;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: $primary-color;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.link:hover:after {
+  width: 100%;
+  left: 0;
+}
+.link--bgc-color::after {
+  background: #fff;
 }
 .link:focus {
   font-weight: bold;
@@ -122,6 +139,10 @@ h4 {
   outline: none;
   cursor: pointer;
   z-index: 1;
+  transition: 0.3s;
+}
+.play-button:hover {
+  transform: scale(1.1);
 }
 .play-button__triangle {
   width: 0;
@@ -153,6 +174,7 @@ h4 {
   color: #f9fbff;
   transform: scaleX(-1);
   align-self: start;
+  transition: 0.3s;
 }
 .icon::before {
   content: "2";
@@ -168,12 +190,16 @@ h4 {
   background-color: $accent-color-brown;
   transform: scaleX(-1);
 }
+.icon:hover {
+  transform: scale(-1.1, 1.1);
+}
 .nav {
   width: 141px;
   height: 277px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: start;
 }
 
 /* FEATURES */
@@ -259,10 +285,12 @@ h4 {
   margin-right: 29px;
   margin-bottom: 32px;
 }
-.next-button {
+.slider__next-button {
   position: absolute;
   left: 1147px;
   top: 248px;
+}
+.next-button {
   width: 48px;
   height: 48px;
   border-radius: 24px;
@@ -272,7 +300,7 @@ h4 {
   color: #fff;
   background-color: $accent-color-brown;
   transition: 0.3s;
-  z-index: 1;
+  z-index: 2;
 }
 .next-button:hover {
   transform: scale(1.1);
@@ -363,6 +391,10 @@ h4 {
   cursor: pointer;
   transition: 0.3s;
 }
+.button--tab-wh {
+  width: 166px;
+  height: 38px;
+}
 .button:hover {
   background-color: (rgba($accent-color-brown, 0.5));
 }
@@ -408,12 +440,15 @@ h4 {
   height: 460px;
   background-color: #fff;
 }
-.tab__main {
+.tab__content {
+  display: none;
+  width: 794px;
+  height: 460px;
+}
+.tab__content.active {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 794px;
-  height: 460px;
 }
 .tab__img {
   position: absolute;
@@ -516,6 +551,7 @@ h4 {
   margin: 216px 0 0 128px;
 }
 .big-slider {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 2310px;
@@ -539,7 +575,7 @@ h4 {
   font-size: 20px;
   line-height: 24px;
 }
-.big-card__h4:nth-child(1)::after {
+.big-card:nth-child(1) > .big-card__inner > .big-card__h4::after {
   content: "155.000";
   position: absolute;
   left: 95px;
@@ -548,7 +584,7 @@ h4 {
   color: $primary-color;
   text-decoration: line-through;
 }
-.big-card__h4:nth-child(2)::after {
+.big-card:nth-child(2) > .big-card__inner > .big-card__h4::after {
   content: "165.000";
   position: absolute;
   left: 95px;
@@ -557,7 +593,7 @@ h4 {
   color: $primary-color;
   text-decoration: line-through;
 }
-.big-card__h4:nth-child(3)::after {
+.big-card:nth-child(3) > .big-card__inner > .big-card__h4::after {
   content: "260.000";
   position: absolute;
   left: 95px;
@@ -566,7 +602,7 @@ h4 {
   color: $primary-color;
   text-decoration: line-through;
 }
-.big-card__h4:nth-child(4)::after {
+.big-card:nth-child(4) > .big-card__inner > .big-card__h4::after {
   content: "155.000";
   position: absolute;
   left: 95px;
@@ -575,7 +611,7 @@ h4 {
   color: $primary-color;
   text-decoration: line-through;
 }
-.big-card__h4:nth-child(5)::after {
+.big-card:nth-child(5) > .big-card__inner > .big-card__h4::after {
   content: "165.000";
   position: absolute;
   left: 95px;
@@ -584,7 +620,7 @@ h4 {
   color: $primary-color;
   text-decoration: line-through;
 }
-.big-card__h4:nth-child(6)::after {
+.big-card:nth-child(6) > .big-card__inner > .big-card__h4::after {
   content: "260.000";
   position: absolute;
   left: 95px;
@@ -609,9 +645,9 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 281px;
+  width: 280px;
   height: 114px;
-  margin: 42px 0 32px 0;
+  margin: 42px 38px 32px;
 }
 .big-card__link-button-container {
   display: flex;
@@ -620,7 +656,11 @@ h4 {
   width: 265px;
   height: 32px;
 }
-
+.big-slider__next-button {
+  position: absolute;
+  top: 232px;
+  left: 1157px;
+}
 /* FOOTER */
 
 .footer {

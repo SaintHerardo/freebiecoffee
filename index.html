@@ -11,6 +11,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    
   </head>
   <body>
     <section class="header">
@@ -38,12 +41,12 @@
         <div class="right-container__inner">
           <a class="icon" href="#"><i class="fas fa-shopping-cart"></i></a>
           <nav class="nav">
-              <a class="link" href="#">TRANG CHỦ</a>
-              <a class="link" href="#">COFFEE</a>
-              <a class="link" href="#">PHIN MẠ MÀU</a>
-              <a class="link" href="#">COMBO PHIN PHÊ</a>
-              <a class="link" href="#">GIFTSET</a>
-              <a class="link" href="#">LIÊN HỆ</a>
+              <a class="link link--bgc-color" href="#">TRANG CHỦ</a>
+              <a class="link link--bgc-color" href="#">COFFEE</a>
+              <a class="link link--bgc-color" href="#">PHIN MẠ MÀU</a>
+              <a class="link link--bgc-color" href="#">COMBO PHIN PHÊ</a> 
+              <a class="link link--bgc-color" href="#">GIFTSET</a>
+              <a class="link link--bgc-color" href="#">LIÊN HỆ</a>
           </nav>
         </div>
       </div>
@@ -153,7 +156,7 @@
                     </div>
                     </div class="card__inner">
                 </div>
-                <button class="next-button">
+                <button class="next-button slider__next-button">
                   <i class="arrow"></i>
                 </button>
                 <div class="card slider__card">
@@ -225,7 +228,7 @@
           <div class="giftset-section__inner">
             <div class="giftset-section__tab-container">
               <div class="tab">
-                <div class="tab__main">
+                <div class="tab__content active">
                   <img class="tab__img" src="./sources/img/giftset.png" alt="Coffee pack" />
                   <div class="tab__inner">
                     <h4 class="h4--accent-color">285.000</h4>
@@ -246,7 +249,57 @@
                       </div>
                     </div>
                     <div class="tab__link-button-container">
-                      <button class="button">MUA NGAY</button><a class="link link--primary-color" href="#">CHI TIẾT</a>
+                      <button class="button button--tab-wh">MUA NGAY</button><a class="link link--primary-color" href="#">CHI TIẾT</a>
+                  </div>
+                  </div>
+                </div>
+                <div class="tab__content">
+                  <img class="tab__img" src="./sources/img/giftset.png" alt="Coffee pack" />
+                  <div class="tab__inner">
+                    <h4 class="h4--accent-color">305.000</h4>
+                    <h3>Giftset "Cà phê phin Việt Nam"</h3>
+                    <div class="text">
+                      Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được
+                      Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học
+                      hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê
+                      của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ
+                      dành riêng cho bạn.
+                    </div>
+                    <div class="tab__item-container">
+                      <div class="tab__item">
+                        <p class="text">Loại hạt <br><span class="text--fw">Fine Robusta Blend</span></p>
+                      </div>
+                      <div class="tab__item">
+                        <p class="text">Độ cao <br><span class="text--fw">700 - 800m</span> </p>
+                      </div>
+                    </div>
+                    <div class="tab__link-button-container">
+                      <button class="button button--tab-wh">MUA NGAY</button><a class="link link--primary-color" href="#">CHI TIẾT</a>
+                  </div>
+                  </div>
+                </div>
+                <div class="tab__content">
+                  <img class="tab__img" src="./sources/img/giftset.png" alt="Coffee pack" />
+                  <div class="tab__inner">
+                    <h4 class="h4--accent-color">325.000</h4>
+                    <h3>Giftset "Cà phê phin Việt Nam"</h3>
+                    <div class="text">
+                      Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được
+                      Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học
+                      hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê
+                      của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ
+                      dành riêng cho bạn.
+                    </div>
+                    <div class="tab__item-container">
+                      <div class="tab__item">
+                        <p class="text">Loại hạt <br><span class="text--fw">Fine Robusta Blend</span></p>
+                      </div>
+                      <div class="tab__item">
+                        <p class="text">Độ cao <br><span class="text--fw">700 - 800m</span> </p>
+                      </div>
+                    </div>
+                    <div class="tab__link-button-container">
+                      <button class="button button--tab-wh">MUA NGAY</button><a class="link link--primary-color" href="#">CHI TIẾT</a>
                   </div>
                   </div>
                 </div>
@@ -306,12 +359,15 @@
                     <a class="link link--primary-color" href="#">CHI TIẾT</a>
                   </div>
                 </div>
+                <button class="next-button big-slider__next-button">
+                  <i class="arrow"></i>
+                </button>
                 <div class="big-card">
                   <img class="big-card__img" src="./sources/img/brown-combo.png" alt="Brown combo coffee pack" />
                   <div class="big-card__inner">
                     <h4 class="big-card__h4 h4--accent-color">249.000</h4>
                     <h3>Combo Revo Honey</h3>
-                    <p class="text">Revo Natural là dòng cà phê đặc biệt của Revo Coffee dành riêng ...</p>
+                    <p class="text">Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...</p>
                   </div>
                   <div class="big-card__link-button-container">
                     <button class="button">MUA NGAY</button>
@@ -323,7 +379,7 @@
                   <div class="big-card__inner">
                     <h4 class="big-card__h4 h4--accent-color">156.000</h4>
                     <h3>Combo Revo Everyday</h3>
-                    <p class="text">Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...</p>
+                    <p class="text ">Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...</p>
                   </div>
                   <div class="big-card__link-button-container">
                     <button class="button">MUA NGAY</button>
@@ -352,4 +408,7 @@
       <p class="footer__text">© Revo Coffee Việt Nam - 2018</p>
     </footer>
   </body>
+  <script src="./js/main.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 </html>
