@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Freebie Coffee</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
@@ -11,48 +11,49 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    
   </head>
   <body>
-    <section class="header">
-      <div class="left-container">
-        <div class="left-container__inner">
-          <a href="#">
+    <header class="header">
+      <div class="title-container">
+        <div class="title-container__inner">
+          <a class="logo__header-link" href="#">
             <img class="logo" src="./sources/img/revo_logo.png" alt="logo" />
           </a>
           <h1 class="header__h1">
-            YOUR <span class="accent-text">PERSONALIZED</span> COFFEE
+            YOUR <span class="header__accent-text">PERSONALIZED</span> COFFEE
           </h1>
         </div>
       </div>
-      <div class="mid-container">
-        <button class="play-button">
-          <div class="play-button__triangle"></div>
-        </button>
+      <div class="video-container">
         <video
           src="#"
-          class="video"
+          class="video-container__video"
           poster="./sources/img/video_background.png"
         ></video>
+        <button class="play-button">
+        </button>
       </div>
-      <div class="right-container">
-        <div class="right-container__inner">
-          <a class="icon" href="#"><i class="fas fa-shopping-cart"></i></a>
+      <div class="nav-container">
+        <div class="nav-container__button">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-container__inner">
+          <a class="icon nav-container__icon" href="#"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
           <nav class="nav">
-              <a class="link link--bgc-color" href="#">TRANG CHỦ</a>
-              <a class="link link--bgc-color" href="#">COFFEE</a>
-              <a class="link link--bgc-color" href="#">PHIN MẠ MÀU</a>
-              <a class="link link--bgc-color" href="#">COMBO PHIN PHÊ</a> 
-              <a class="link link--bgc-color" href="#">GIFTSET</a>
-              <a class="link link--bgc-color" href="#">LIÊN HỆ</a>
+            <a class="link link--bgc-color" href="#">TRANG CHỦ</a>
+            <a class="link link--bgc-color" href="#">COFFEE</a>
+            <a class="link link--bgc-color" href="#">PHIN MẠ MÀU</a>
+            <a class="link link--bgc-color" href="#">COMBO PHIN PHÊ</a>
+            <a class="link link--bgc-color" href="#">GIFTSET</a>
+            <a class="link link--bgc-color" href="#">LIÊN HỆ</a>
           </nav>
         </div>
       </div>
-    </section>
-    <main>
-      <section class="features">
+    </header>
+    <main> 
+       <section class="features">
         <div class="features__inner">
           <div class="title">
             <h4 class=" h4--title-mb">Your Personalized Coffee</h4>
@@ -60,28 +61,28 @@
           </div>
           <div class="item-container">
             <div class="item">
-              <img src="./sources/img/IC1.png" class="item__img"></img>
+              <img src="./sources/img/IC1.png" alt="" class="item__img"></img>
               <div class="item__inner">
                 <h3>Nguồn gốc</h3>
                 <p class="text">Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.</p>
               </div>
              </div>
             <div class="item">
-              <img src="./sources/img/IC2.png" class="item__img"></img>
+              <img src="./sources/img/IC2.png" alt="" class="item__img"></img>
               <div class="item__inner">
                 <h3>Chất lượng</h3>
                 <div class="text">Từng một hạt cà phê là cả một quá trình tập trung cao độ của nghệ nhân cà phê.</div>
               </div>
             </div>
             <div class="item">
-              <img src="./sources/img/IC3.png" class="item__img"></img>
+              <img src="./sources/img/IC3.png" alt="" class="item__img"></img>
               <div class="item__inner">
                 <h3>Các loại hạt</h3>
                 <p class="text">70% chất lượng tách cà phê đến từ nguồn gốc và chất lượng green bean.</p>
               </div>
             </div>
             <div class="item">
-              <img src="./sources/img/IC4.png" class="item__img"></img>
+              <img src="./sources/img/IC4.png" alt="" class="item__img"></img>
               <div class="item__inner">
                 <h3>Pha chế</h3>
                 <p class="text">Những hạt cà phê được lột xác qua quá trình rang xay kỹ lưỡng và nghiêm ngặt.</p>
@@ -90,18 +91,24 @@
           </div>
         </div>
       </section>
-      <section class="slider-section">
-        <div class="title slider-section__title">
+      <section class="coffee-section">
+        <div class="title coffee-section__title">
           <h4 class=" h4--title-mb">Choose Your Favorite</h4>
           <h2>CHUẨN GU ĐÚNG VỊ</h2>
         </div>
-        <div class="slider-section__small-container">
+        <div class="coffee-section__small-container">
         </div>
-        <div class="slider-section__big-container">
-            <div class="slider-section__slider-container">
-              <div class="slider">
-                <div class="card slider__card">
-                  <img class="card__img" src="./sources/img/yellow.png" alt="" />
+        <div class="coffee-section__big-container">
+          <button class="next_button coffee-section__prev_button">
+            <i class="arrow_left"></i>
+          </button>
+          <button class="next_button coffee-section__next_button">
+            <i class="arrow_right"></i>
+          </button>
+            <div class="coffee-section__container">
+              <div class="coffee-carousel">
+                <div class="card coffee-carousel__card">
+                  <img class="card__img"  src="./sources/img/yellow.png" alt="" />
                   <div class="card__container">
                     <h4 class="card__h4 h4--accent-color">99.000</h4>
                     <div class="card__inner">
@@ -114,8 +121,8 @@
                     </div>
                 </div>
                 </div>
-                <div class="card slider__card">
-                  <img class="card__img" src="./sources/img/blue.png" alt="" />
+                <div class="card coffee-carousel__card">
+                  <img class="card__img"  src="./sources/img/blue.png" alt="" />
                   <div class="card__container">
                     <h4 class="card__h4 h4--accent-color">85.000</h4>
                     <div class="card__inner">
@@ -128,7 +135,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card slider__card">
+                <div class="card coffee-carousel__card">
                   <img class="card__img" src="./sources/img/yellow.png" alt="" />
                   <div class="card__container">
                     <h4 class="card__h4 h4--accent-color">99.000</h4>
@@ -142,8 +149,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="card slider__card">
-                  <img class="card__img" src="./sources/img/blue.png" alt="" />
+                <div class="card coffee-carousel__card">
+                  <img class="card__img"  src="./sources/img/blue.png" alt="" />
                   <div class="card__container">
                     <h4 class="card__h4 h4--accent-color">85.000</h4>
                     <div class="card__inner">
@@ -154,13 +161,10 @@
                         <a class="link link--primary-color" href="#">CHI TIẾT</a>  
                       </div>                    
                     </div>
-                    </div class="card__inner">
+                    </div>
                 </div>
-                <button class="next-button slider__next-button">
-                  <i class="arrow"></i>
-                </button>
-                <div class="card slider__card">
-                  <img class="card__img" src="./sources/img/orange.png" alt="" />
+                <div class="card coffee-carousel__card">
+                  <img class="card__img"  src="./sources/img/orange.png" alt="" />
                   <div class="card__container">
                     <h4 class="card__h4 h4--accent-color">139.000</h4>
                     <div class="card__inner">
@@ -173,8 +177,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="card slider__card">
-                  <img class="card__img" src="./sources/img/brown.png" alt="" />
+                <div class="card coffee-carousel__card">
+                  <img class="card__img"  src="./sources/img/brown.png" alt="" />
                   <div class="card__container">
                     <h4 class="card__h4 h4--accent-color">75.000</h4>
                     <div class="card__inner">
@@ -187,8 +191,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="card slider__card">
-                  <img class="card__img" src="./sources/img/orange.png" alt="" />
+                <div class="card coffee-carousel__card">
+                  <img class="card__img"  src="./sources/img/orange.png" alt="" />
                   <div class="card__container">
                     <h4 class="card__h4 h4--accent-color">139.000</h4>
                     <div class="card__inner">
@@ -201,8 +205,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="card slider__card">
-                  <img class="card__img" src="./sources/img/brown.png" alt="" />
+                <div class="card coffee-carousel__card">
+                  <img class="card__img"  src="./sources/img/brown.png" alt="" />
                   <div class="card__container">
                     <h4 class="card__h4 h4--accent-color">75.000</h4>
                     <div class="card__inner">
@@ -219,17 +223,16 @@
              </div>
           </div>
       </section>
-      <section class="giftset-section">
+      <section class="giftset-section"> 
         <div class="title giftset-section__title">
           <h4 class="h4--title-mb">Best Gift For Best Friend</h4>
           <h2>GIFTSET</h2>
         </div>
         <div class="giftset-section__big-container">
           <div class="giftset-section__inner">
-            <div class="giftset-section__tab-container">
               <div class="tab">
-                <div class="tab__content active">
-                  <img class="tab__img" src="./sources/img/giftset.png" alt="Coffee pack" />
+                <div class="tab__content" id="tab_1">
+                  <img class="tab__img"  src="./sources/img/giftset.png" alt="Coffee pack" />
                   <div class="tab__inner">
                     <h4 class="h4--accent-color">285.000</h4>
                     <h3>Giftset "Cà phê phin Việt Nam"</h3>
@@ -253,8 +256,8 @@
                   </div>
                   </div>
                 </div>
-                <div class="tab__content">
-                  <img class="tab__img" src="./sources/img/giftset.png" alt="Coffee pack" />
+                <div class="tab__content" id="tab_2">
+                  <img class="tab__img"  src="./sources/img/giftset-big.png" alt="Coffee pack" />
                   <div class="tab__inner">
                     <h4 class="h4--accent-color">305.000</h4>
                     <h3>Giftset "Cà phê phin Việt Nam"</h3>
@@ -278,8 +281,8 @@
                   </div>
                   </div>
                 </div>
-                <div class="tab__content">
-                  <img class="tab__img" src="./sources/img/giftset.png" alt="Coffee pack" />
+                <div class="tab__content" id="tab_3">
+                  <img class="tab__img"  src="./sources/img/giftset-fl.png" alt="Coffee pack" />
                   <div class="tab__inner">
                     <h4 class="h4--accent-color">325.000</h4>
                     <h3>Giftset "Cà phê phin Việt Nam"</h3>
@@ -304,27 +307,31 @@
                   </div>
                 </div>
                 <div class="tab__button-container">
-                  <button class="tab__button">1</button>
-                  <button class="tab__button">2</button>
-                  <button class="tab__button">3</button>
+                  <button class="tab__button" data-tab="#tab_1">1</button>
+                  <button class="tab__button" data-tab="#tab_2">2</button>
+                  <button class="tab__button" data-tab="#tab_3">3</button>
                 </div>
               </div>
             </div>
-              
-          </div>
         </div>
         <div class="giftset-section__small-container"></div>
       </section>
-      <section class="big-slider-section">
-        <div class="title big-slider-section__title">
+      <section class="combo-section">
+        <div class="title combo-section__title">
           <h4 class="h4--title-mb">Your Personalized Coffee</h4>
           <h2>COMBO PHIN PHÊ</h2>
         </div>
-        <div class="big-slider-section__big-container">
-          <div class="big-slider-section__inner">
-            <div class="big-slider">
+        <div class="combo-section__big-container">
+          <div class="combo-section__inner">
+            <button class="next_button big-carousel__prev-button">
+              <i class="arrow_left"></i>
+            </button>
+            <button class="next_button big-carousel__next-button">
+              <i class="arrow_right"></i>
+            </button>
+            <div class="big-carousel">
                 <div class="big-card">
-                  <img class="big-card__img" src="./sources/img/brown-combo.png" alt="Brown combo coffee pack" />
+                  <img class="big-card__img"  src="./sources/img/brown-combo.png" alt="Brown combo coffee pack" />
                   <div class="big-card__inner">
                     <h4 class="big-card__h4 h4--accent-color">147.000</h4>
                     <h3>Combo Revo Đậm Đà</h3>
@@ -336,7 +343,7 @@
                   </div>
                 </div>
                 <div class="big-card">
-                  <img class="big-card__img" src="./sources/img/blue-combo.png" alt="Blue combo coffee pack" />
+                  <img class="big-card__img"  src="./sources/img/blue-combo.png" alt="Blue combo coffee pack" />
                   <div class="big-card__inner">
                     <h4 class="big-card__h4 h4--accent-color">156.000</h4>
                     <h3>Combo Revo Everyday</h3>
@@ -348,7 +355,7 @@
                   </div>
                 </div>
                 <div class="big-card">
-                  <img class="big-card__img" src="./sources/img/red-combo.png" alt="Red combo coffee pack" />
+                  <img class="big-card__img"  src="./sources/img/red-combo.png" alt="Red combo coffee pack" />
                   <div class="big-card__inner">
                     <h4 class="big-card__h4 h4--accent-color">275.000</h4>
                     <h3>Combo Revo Honey</h3>
@@ -359,11 +366,8 @@
                     <a class="link link--primary-color" href="#">CHI TIẾT</a>
                   </div>
                 </div>
-                <button class="next-button big-slider__next-button">
-                  <i class="arrow"></i>
-                </button>
                 <div class="big-card">
-                  <img class="big-card__img" src="./sources/img/brown-combo.png" alt="Brown combo coffee pack" />
+                  <img class="big-card__img"  src="./sources/img/brown-combo.png" alt="Brown combo coffee pack" />
                   <div class="big-card__inner">
                     <h4 class="big-card__h4 h4--accent-color">249.000</h4>
                     <h3>Combo Revo Honey</h3>
@@ -375,7 +379,7 @@
                   </div>
                 </div>
                 <div class="big-card">
-                  <img class="big-card__img" src="./sources/img/blue-combo.png" alt="Blue combo coffee pack" />
+                  <img class="big-card__img"  src="./sources/img/blue-combo.png" alt="Blue combo coffee pack" />
                   <div class="big-card__inner">
                     <h4 class="big-card__h4 h4--accent-color">156.000</h4>
                     <h3>Combo Revo Everyday</h3>
@@ -387,7 +391,7 @@
                   </div>
                 </div>
                 <div class="big-card">
-                  <img class="big-card__img" src="./sources/img/red-combo.png" alt="Red combo coffee pack" />
+                  <img class="big-card__img"  src="./sources/img/red-combo.png" alt="Red combo coffee pack" />
                   <div class="big-card__inner">
                     <h4 class="big-card__h4 h4--accent-color">275.000</h4>
                     <h3>Combo Revo Honey</h3>
@@ -401,14 +405,16 @@
             </div>
           </div>
         </div>
-        <div class="big-slider-section__small-container"></div>
-      </section>
+        <div class="combo-section__small-container"></div>
+      </section> 
     </main>
     <footer class="footer">
       <p class="footer__text">© Revo Coffee Việt Nam - 2018</p>
     </footer>
   </body>
   <script src="./js/main.js"></script>
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="./js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/be40ad35d0.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
