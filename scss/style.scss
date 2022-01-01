@@ -1,0 +1,733 @@
+@import "./_normalize";
+@import "./vars";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,300&display=swap");
+
+body {
+  max-width: 1400px;
+  background-color: #f9fbff;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 54px;
+  font-family: "Montserrat";
+  color: $primary-color;
+  line-height: 70px;
+}
+h2 {
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: $primary-color;
+  line-height: 34px;
+}
+h3 {
+  font-size: 24px;
+  font-family: "Nunito";
+  color: $dark-gray;
+  line-height: 24px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Nunito";
+  color: $primary-color;
+  font-weight: 600;
+}
+.h4--accent-color {
+  color: $accent-color-brown;
+}
+.h4--title-mb {
+  margin-bottom: 6px;
+}
+.text {
+  font-size: 16px;
+  font-family: "Nunito";
+  line-height: 22px;
+}
+.text--fw {
+  font-weight: 700;
+}
+.link {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  font-family: "Nunito";
+  color: #edf0f5;
+  text-decoration: none;
+}
+.link--primary-color {
+  color: $primary-color;
+  font-weight: 700;
+  padding-top: 2px;
+}
+.link:after {
+  position: relative;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: $primary-color;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.link:hover:after {
+  width: 100%;
+  left: 0;
+}
+.link--bgc-color::after {
+  background: #fff;
+}
+.link:focus {
+  font-weight: bold;
+}
+.link_primary-color {
+  color: $primary-color;
+}
+/* Header =====================================================*/
+.header {
+  display: flex;
+  max-width: 1400px;
+  height: 768px;
+  overflow: hidden;
+}
+.header__h1 {
+  padding-left: 7px;
+  z-index: 1;
+}
+.logo__header-link {
+  width: 109px;
+  height: 36px;
+}
+.header__accent-text {
+  position: relative;
+  right: 15px;
+  padding: 0 15px;
+  color: #fff;
+  background-color: $accent-color-brown;
+}
+.nav-container__button {
+  display: none;
+  z-index: 1;
+}
+
+/* title CONTAINER ============================================*/
+.title-container {
+  width: 436px;
+  height: 100%;
+}
+.title-container__inner {
+  height: 628px;
+  padding: 76px 0 64px 188px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* video CONTAINER ============================================*/
+.video-container {
+  position: relative;
+  max-width: 690px;
+  height: 100%;
+}
+.video-container__video {
+  object-fit: cover;
+  background-color: $dark-gray;
+  width: 100%;
+  height: 100%;
+}
+.play-button {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  border-radius: 27px;
+  top: 45%;
+  right: 45%;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.3s;
+}
+.play-button:hover {
+  transform: scale(1.1);
+}
+.play-button::after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 23px;
+  border-style: solid;
+  border-width: 10px 0 10px 14px;
+  border-color: transparent transparent transparent $accent-color-brown;
+}
+
+/* nav CONTAINER ============================================*/
+
+.nav-container {
+  display: block;
+  width: 274px;
+  height: 768px;
+  background-color: $primary-color;
+  transition: right 2s;
+}
+.nav-container__inner {
+  width: 100%;
+  max-width: 140px;
+  height: 431px;
+  display: flex;
+  flex-direction: column;
+  margin: 76px 0 261px 57px;
+  justify-content: space-between;
+}
+.icon {
+  position: relative;
+  color: #f9fbff;
+  transform: scaleX(-1);
+  align-self: start;
+  transition: 0.3s;
+}
+.nav-container__icon::before {
+  content: "2";
+  position: absolute;
+  bottom: 11px;
+  left: -11px;
+  font-size: 14px;
+  font-family: "Nunito";
+  padding: 4px 0 0 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: $accent-color-brown;
+  transform: scaleX(-1);
+}
+.nav-container__icon:hover {
+  transform: scale(-1.1, 1.1);
+}
+.nav {
+  width: 100%;
+  height: 277px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+/* FEATURES ============================================*/
+
+.features {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  height: 598px;
+}
+.features__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 96px;
+  width: 1104px;
+  height: 383px;
+}
+.title {
+  text-align: center;
+}
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1104px;
+  height: 247px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 226px;
+  height: 247px;
+}
+.item__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 226px;
+  height: 106px;
+}
+
+/* coffee SECTION ============================================*/
+
+.coffee-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1400px;
+  height: 894px;
+}
+.coffee-section__title {
+  position: absolute;
+  margin-top: 86px;
+}
+.coffee-section__small-container {
+  width: 384px;
+  height: 894px;
+  background-color: $primary-color;
+}
+.coffee-section__big-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 1016px;
+  height: 894px;
+}
+.coffee-section__container {
+  width: 1290px;
+  height: auto;
+  margin: 202px -20px 108px 0;
+  margin-left: -274px;
+  padding: 20px;
+  overflow: hidden;
+}
+.coffee-carousel {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 2443px;
+  height: 544px;
+  right: 0px;
+  transition: 0.5s;
+}
+.coffee-carousel__card {
+  margin-right: 29px;
+  margin-bottom: 32px;
+}
+.next_button {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: $accent-color-brown;
+  transition: 0.5s;
+  z-index: 2;
+}
+.next_button:hover {
+  transform: scale(1.1);
+}
+.coffee-section__next_button {
+  position: absolute;
+  left: 1269px;
+  top: 470px;
+  opacity: 1;
+  transition: 0.5s;
+}
+.coffee-section__prev_button {
+  display: none;
+  position: absolute;
+  left: 100px;
+  top: 470px;
+  transition: 0.5s;
+  opacity: 0;
+}
+.arrow_right {
+  position: relative;
+  left: 3px;
+  top: -1px;
+  height: 10px;
+  width: 10px;
+  border: solid #fff;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+.arrow_right:before {
+  position: absolute;
+  content: "";
+  left: -7px;
+  top: 2px;
+  width: 19px;
+  height: 1px;
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+.arrow_left {
+  position: relative;
+  left: -3px;
+  top: -1px;
+  height: 10px;
+  width: 10px;
+  border: solid #fff;
+  border-width: 1px 0 0 1px;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+.arrow_left:before {
+  position: absolute;
+  content: "";
+  left: -3px;
+  top: 6px;
+  width: 19px;
+  height: 1px;
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+.card {
+  display: flex;
+  width: 560px;
+  height: 256px;
+  transition: 0.3s;
+}
+.card:hover {
+  position: relative;
+  -webkit-box-shadow: 0px 0px 7px 7px rgba(190, 190, 190, 0.2);
+  -moz-box-shadow: 0px 0px 7px 7px rgba(190, 190, 190, 0.2);
+  box-shadow: 0px 0px 7px 7px rgba(190, 190, 190, 0.2);
+  transform: scale(1.01);
+}
+.card__container {
+  width: 325px;
+  height: 256px;
+  background-color: #fff;
+}
+.card__img {
+  width: 235px;
+  height: 256px;
+  background-color: $light-gray;
+}
+.card__h4 {
+  margin: 42px 0 0 45px;
+}
+.card__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 233px;
+  height: 140px;
+  margin: 8px 47px 42px 43px;
+}
+.card__link-button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 244px;
+  height: 32px;
+}
+.button {
+  width: 134px;
+  height: 32px;
+  border-radius: 19px;
+  font-size: 16px;
+  font-family: "Nunito";
+  color: #f9fbff;
+  background-color: $accent-color-brown;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button--tab-wh {
+  width: 166px;
+  height: 38px;
+}
+.button:hover {
+  background-color: (rgba($accent-color-brown, 0.5));
+}
+
+/* GIFTSET SECTION ============================================*/
+
+.giftset-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1400px;
+  height: 802px;
+}
+.giftset-section__title {
+  position: absolute;
+  margin-top: 86px;
+}
+.giftset-section__big-container {
+  width: 1076px;
+  height: 802px;
+  background-color: $light-gray;
+}
+.giftset-section__small-container {
+  width: 324px;
+  height: 802px;
+  background-color: #f9fbff;
+}
+.giftset-section__inner {
+  width: 882px;
+  height: 460px;
+  margin: 216px 132px 126px 386px;
+}
+
+/* TAB  ============================================*/
+
+.tab {
+  position: relative;
+  display: flex;
+  width: 882px;
+  height: 460px;
+  background-color: #fff;
+}
+.tab__content {
+  display: none;
+  width: 794px;
+  height: 460px;
+}
+.tab__content.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.tab__img {
+  position: absolute;
+  top: 52px;
+  left: -258px;
+  width: 463px;
+  height: 416px;
+}
+.tab__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 435px;
+  height: 332px;
+  margin: 64px 61px 65px 299px;
+}
+.tab__item-container {
+  display: flex;
+  justify-content: space-between;
+}
+.tab__item {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 226px;
+  height: 40px;
+  padding-left: 52px;
+  color: $primary-color;
+  font-weight: 600;
+}
+.tab__item:nth-child(1):before {
+  content: url(../sources/img/IC_coffee.png);
+  position: absolute;
+  left: 5px;
+}
+.tab__item:nth-child(2):before {
+  content: url(../sources/img/IC_Mountain.png);
+  position: absolute;
+  left: 5px;
+}
+.tab__link-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 366px;
+  height: 38px;
+}
+.tab__button-container {
+  width: 88px;
+  height: 459px;
+}
+.tab__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 30px;
+  color: rgba($primary-color, 0.5);
+  width: 88px;
+  height: 154px;
+  background-color: $light-gray;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.tab__button.active {
+  color: $primary-color;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+/* Combo section ============================================*/
+
+.combo-section {
+  display: flex;
+  width: 1400px;
+  height: 906px;
+  overflow: hidden;
+}
+.combo-section__title {
+  position: absolute;
+  margin: 88px 560px 0 550px;
+}
+.combo-section__big-container {
+  width: 1074px;
+  height: 906px;
+}
+.combo-section__small-container {
+  width: 326px;
+  height: 906px;
+  background-color: $primary-color;
+}
+.combo-section__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1140px;
+  height: 690px;
+  margin: 216px 0 0 128px;
+}
+.big-carousel {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 2310px;
+  height: 562px;
+  right: 0px;
+  transition: 0.5s;
+}
+.big-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  height: 562px;
+  z-index: 1;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.big-card:hover {
+  position: relative;
+  -webkit-box-shadow: 0px 0px 7px 7px rgba(190, 190, 190, 0.2);
+  -moz-box-shadow: 0px 0px 7px 7px rgba(190, 190, 190, 0.2);
+  box-shadow: 0px 0px 7px 7px rgba(190, 190, 190, 0.2);
+  transform: scale(1.01);
+}
+
+.big-card__h4 {
+  position: relative;
+  height: 22px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.big-card:nth-child(1) > .big-card__inner > .big-card__h4::after {
+  content: "155.000";
+  position: absolute;
+  left: 95px;
+  top: 5px;
+  font-size: 14px;
+  color: $primary-color;
+  text-decoration: line-through;
+}
+.big-card:nth-child(2) > .big-card__inner > .big-card__h4::after {
+  content: "165.000";
+  position: absolute;
+  left: 95px;
+  top: 4px;
+  font-size: 14px;
+  color: $primary-color;
+  text-decoration: line-through;
+}
+.big-card:nth-child(3) > .big-card__inner > .big-card__h4::after {
+  content: "260.000";
+  position: absolute;
+  left: 95px;
+  top: 4px;
+  font-size: 14px;
+  color: $primary-color;
+  text-decoration: line-through;
+}
+.big-card:nth-child(4) > .big-card__inner > .big-card__h4::after {
+  content: "155.000";
+  position: absolute;
+  left: 95px;
+  top: 4px;
+  font-size: 14px;
+  color: $primary-color;
+  text-decoration: line-through;
+}
+.big-card:nth-child(5) > .big-card__inner > .big-card__h4::after {
+  content: "165.000";
+  position: absolute;
+  left: 95px;
+  top: 4px;
+  font-size: 14px;
+  color: $primary-color;
+  text-decoration: line-through;
+}
+.big-card:nth-child(6) > .big-card__inner > .big-card__h4::after {
+  content: "260.000";
+  position: absolute;
+  left: 95px;
+  top: 4px;
+  font-size: 14px;
+  color: $primary-color;
+  text-decoration: line-through;
+}
+.big-card__img {
+  width: 360px;
+  height: 300px;
+  object-fit: contain;
+  background-color: $light-gray;
+}
+.big-card__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 114px;
+  margin: 42px 38px 32px;
+}
+.big-card__link-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 265px;
+  height: 32px;
+}
+.big-carousel__next-button {
+  position: absolute;
+  top: 275px;
+  left: 1130px;
+}
+.big-carousel__prev-button {
+  position: absolute;
+  top: 275px;
+  left: -40px;
+  opacity: 0;
+}
+/* FOOTER ============================================*/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 1400px;
+  height: 60px;
+}
+.footer__text {
+  font-family: "Nunito";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: $primary-color;
+  margin: 18px 0 20px 0;
+}
+@import "./_media-quaries.scss";
