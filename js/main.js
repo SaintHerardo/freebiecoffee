@@ -5,6 +5,7 @@ const mq768 = window.matchMedia("(max-width: 768px)");
 const mq992 = window.matchMedia("(max-width: 992px)");
 const mq1200 = window.matchMedia("(max-width: 1200px)");
 const mq1400 = window.matchMedia("(max-width: 1400px)");
+const mq1920 = window.matchMedia("(max-width: 1920px)");
 
 mq320.addEventListener("change", changingSmCarOffset);
 mq426.addEventListener("change", changingSmCarOffset);
@@ -13,6 +14,7 @@ mq768.addEventListener("change", changingSmCarOffset);
 mq992.addEventListener("change", changingSmCarOffset);
 mq1200.addEventListener("change", changingSmCarOffset);
 mq1400.addEventListener("change", changingSmCarOffset);
+mq1920.addEventListener("change", changingSmCarOffset);
 changingSmCarOffset();
 
 mq320.addEventListener("change", changingBigCarOffset);
@@ -22,6 +24,7 @@ mq768.addEventListener("change", changingBigCarOffset);
 mq992.addEventListener("change", changingBigCarOffset);
 mq1200.addEventListener("change", changingBigCarOffset);
 mq1400.addEventListener("change", changingBigCarOffset);
+mq1920.addEventListener("change", changingBigCarOffset);
 changingBigCarOffset();
 
 /* Header Nav container ----------------------- */
@@ -198,7 +201,7 @@ function changingSmCarOffset() {
         btnNext.style.opacity = "0";
         setTimeout(hideNext, 500);
       }
-      if (offset >= 412) {
+      if (offset >= 824) {
         btnPrev.style.display = "block";
         setTimeout(() => {
           btnPrev.style.opacity = "1";
@@ -309,8 +312,8 @@ function changingSmCarOffset() {
 
     function slideRight() {
       offset += 442;
-      if (offset >= 884) {
-        offset = 884;
+      if (offset >= 1324) {
+        offset = 1324;
         btnNext.style.opacity = "0";
         setTimeout(hideNext, 500);
       }
@@ -325,7 +328,7 @@ function changingSmCarOffset() {
 
     function slideLeft() {
       offset -= 442;
-      if (offset < 442) {
+      if (offset < 440) {
         offset = 0;
         btnPrev.style.opacity = "0";
         setTimeout(hidePrev, 500);
@@ -397,6 +400,64 @@ function changingSmCarOffset() {
       carousel.style.right = offset + "px";
     }
   } else if (mq1400.matches) {
+    const btnPrev = document.querySelector(".coffee-section__prev_button");
+    const btnNext = document.querySelector(".coffee-section__next_button");
+    const carousel = document.querySelector(".coffee-carousel");
+
+    let offset = 0;
+
+    function hideNext() {
+      btnNext.style.display = "none";
+    }
+
+    function showNext() {
+      btnNext.style.display = "block";
+    }
+
+    function hidePrev() {
+      btnPrev.style.display = "none";
+    }
+
+    function showPrev() {
+      btnPrev.style.display = "block";
+    }
+
+    btnPrev.addEventListener("click", slideLeft);
+
+    btnNext.addEventListener("click", slideRight);
+
+    function slideRight() {
+      offset += 590;
+      if (offset >= 1180) {
+        offset = 1180;
+        btnNext.style.opacity = "0";
+        setTimeout(hideNext, 500);
+      }
+      if (offset >= 590) {
+        btnPrev.style.display = "block";
+        setTimeout(() => {
+          btnPrev.style.opacity = "1";
+        }, this.animationDelay + 20);
+      }
+      carousel.style.right = offset + "px";
+    }
+
+    function slideLeft() {
+      offset -= 590;
+      if (offset < 590) {
+        offset = 0;
+        btnPrev.style.opacity = "0";
+        setTimeout(hidePrev, 500);
+      }
+      if (offset < 1180) {
+        btnNext.style.display = "block";
+        setTimeout(() => {
+          btnNext.style.opacity = "1";
+        }, this.animationDelay + 20);
+      }
+      carousel.style.right = offset + "px";
+    }
+  } else if (mq1920.matches) {
     const btnPrev = document.querySelector(".coffee-section__prev_button");
     const btnNext = document.querySelector(".coffee-section__next_button");
     const carousel = document.querySelector(".coffee-carousel");
@@ -547,7 +608,7 @@ function changingBigCarOffset() {
       }
       carouselBC.style.right = offsetBC + "px";
     }
-  } else if (mq768.matches) {
+  } else if (mq426.matches) {
     const btnPrevBC = document.querySelector(".big-carousel__prev-button");
     const btnNextBC = document.querySelector(".big-carousel__next-button");
     const carouselBC = document.querySelector(".big-carousel");
@@ -576,8 +637,8 @@ function changingBigCarOffset() {
 
     function slideRightBC() {
       offsetBC += 220;
-      if (offsetBC >= 660) {
-        offsetBC = 660;
+      if (offsetBC >= 880) {
+        offsetBC = 880;
         btnNextBC.style.opacity = "0";
         setTimeout(hideNextBC, 500);
       }
@@ -597,7 +658,7 @@ function changingBigCarOffset() {
         btnPrevBC.style.opacity = "0";
         setTimeout(hidePrevBC, 500);
       }
-      if (offsetBC < 660) {
+      if (offsetBC < 880) {
         btnNextBC.style.display = "block";
         setTimeout(() => {
           btnNextBC.style.opacity = "1";
@@ -605,7 +666,7 @@ function changingBigCarOffset() {
       }
       carouselBC.style.right = offsetBC + "px";
     }
-  } else if (mq426.matches) {
+  } else if (mq576.matches) {
     const btnPrevBC = document.querySelector(".big-carousel__prev-button");
     const btnNextBC = document.querySelector(".big-carousel__next-button");
     const carouselBC = document.querySelector(".big-carousel");
@@ -692,8 +753,8 @@ function changingBigCarOffset() {
 
     function slideRightBC() {
       offsetBC += 220;
-      if (offsetBC >= 660) {
-        offsetBC = 660;
+      if (offsetBC >= 880) {
+        offsetBC = 880;
         btnNextBC.style.opacity = "0";
         setTimeout(hideNextBC, 500);
       }
@@ -713,123 +774,7 @@ function changingBigCarOffset() {
         btnPrevBC.style.opacity = "0";
         setTimeout(hidePrevBC, 500);
       }
-      if (offsetBC < 660) {
-        btnNextBC.style.display = "block";
-        setTimeout(() => {
-          btnNextBC.style.opacity = "1";
-        }, this.animationDelay + 20);
-      }
-      carouselBC.style.right = offsetBC + "px";
-    }
-  } else if (mq576.matches) {
-    const btnPrevBC = document.querySelector(".big-carousel__prev-button");
-    const btnNextBC = document.querySelector(".big-carousel__next-button");
-    const carouselBC = document.querySelector(".big-carousel");
-
-    let offsetBC = 0;
-
-    function hideNextBC() {
-      btnNextBC.style.display = "none";
-    }
-
-    function showNextBC() {
-      btnNextBC.style.display = "block";
-    }
-
-    function hidePrevBC() {
-      btnPrevBC.style.display = "none";
-    }
-
-    function showPrevBC() {
-      btnPrevBC.style.display = "block";
-    }
-
-    btnPrevBC.addEventListener("click", slideLeftBC);
-
-    btnNextBC.addEventListener("click", slideRightBC);
-
-    function slideRightBC() {
-      offsetBC += 195;
-      if (offsetBC >= 585) {
-        offsetBC = 585;
-        btnNextBC.style.opacity = "0";
-        setTimeout(hideNextBC, 500);
-      }
-      if (offsetBC >= 195) {
-        btnPrevBC.style.display = "block";
-        setTimeout(() => {
-          btnPrevBC.style.opacity = "1";
-        }, this.animationDelay + 20);
-      }
-      carouselBC.style.right = offsetBC + "px";
-    }
-
-    function slideLeftBC() {
-      offsetBC -= 195;
-      if (offsetBC < 195) {
-        offsetBC = 0;
-        btnPrevBC.style.opacity = "0";
-        setTimeout(hidePrevBC, 500);
-      }
-      if (offsetBC < 585) {
-        btnNextBC.style.display = "block";
-        setTimeout(() => {
-          btnNextBC.style.opacity = "1";
-        }, this.animationDelay + 20);
-      }
-      carouselBC.style.right = offsetBC + "px";
-    }
-  } else if (mq768.matches) {
-    const btnPrevBC = document.querySelector(".big-carousel__prev-button");
-    const btnNextBC = document.querySelector(".big-carousel__next-button");
-    const carouselBC = document.querySelector(".big-carousel");
-
-    let offsetBC = 0;
-
-    function hideNextBC() {
-      btnNextBC.style.display = "none";
-    }
-
-    function showNextBC() {
-      btnNextBC.style.display = "block";
-    }
-
-    function hidePrevBC() {
-      btnPrevBC.style.display = "none";
-    }
-
-    function showPrevBC() {
-      btnPrevBC.style.display = "block";
-    }
-
-    btnPrevBC.addEventListener("click", slideLeftBC);
-
-    btnNextBC.addEventListener("click", slideRightBC);
-
-    function slideRightBC() {
-      offsetBC += 220;
-      if (offsetBC >= 660) {
-        offsetBC = 660;
-        btnNextBC.style.opacity = "0";
-        setTimeout(hideNextBC, 500);
-      }
-      if (offsetBC >= 220) {
-        btnPrevBC.style.display = "block";
-        setTimeout(() => {
-          btnPrevBC.style.opacity = "1";
-        }, this.animationDelay + 20);
-      }
-      carouselBC.style.right = offsetBC + "px";
-    }
-
-    function slideLeftBC() {
-      offsetBC -= 220;
-      if (offsetBC < 220) {
-        offsetBC = 0;
-        btnPrevBC.style.opacity = "0";
-        setTimeout(hidePrevBC, 500);
-      }
-      if (offsetBC < 660) {
+      if (offsetBC < 880) {
         btnNextBC.style.display = "block";
         setTimeout(() => {
           btnNextBC.style.opacity = "1";
@@ -865,13 +810,13 @@ function changingBigCarOffset() {
     btnNextBC.addEventListener("click", slideRightBC);
 
     function slideRightBC() {
-      offsetBC += 280;
-      if (offsetBC >= 1120) {
-        offsetBC = 1120;
+      offsetBC += 260;
+      if (offsetBC >= 780) {
+        offsetBC = 780;
         btnNextBC.style.opacity = "0";
         setTimeout(hideNextBC, 500);
       }
-      if (offsetBC >= 280) {
+      if (offsetBC >= 260) {
         btnPrevBC.style.display = "block";
         setTimeout(() => {
           btnPrevBC.style.opacity = "1";
@@ -881,13 +826,13 @@ function changingBigCarOffset() {
     }
 
     function slideLeftBC() {
-      offsetBC -= 280;
-      if (offsetBC < 280) {
+      offsetBC -= 260;
+      if (offsetBC < 260) {
         offsetBC = 0;
         btnPrevBC.style.opacity = "0";
         setTimeout(hidePrevBC, 500);
       }
-      if (offsetBC < 1120) {
+      if (offsetBC < 780) {
         btnNextBC.style.display = "block";
         setTimeout(() => {
           btnNextBC.style.opacity = "1";
@@ -923,13 +868,13 @@ function changingBigCarOffset() {
     btnNextBC.addEventListener("click", slideRightBC);
 
     function slideRightBC() {
-      offsetBC += 280;
-      if (offsetBC >= 1120) {
-        offsetBC = 1120;
+      offsetBC += 275;
+      if (offsetBC >= 825) {
+        offsetBC = 825;
         btnNextBC.style.opacity = "0";
         setTimeout(hideNextBC, 500);
       }
-      if (offsetBC >= 280) {
+      if (offsetBC >= 275) {
         btnPrevBC.style.display = "block";
         setTimeout(() => {
           btnPrevBC.style.opacity = "1";
@@ -939,13 +884,13 @@ function changingBigCarOffset() {
     }
 
     function slideLeftBC() {
-      offsetBC -= 280;
-      if (offsetBC < 280) {
+      offsetBC -= 275;
+      if (offsetBC < 275) {
         offsetBC = 0;
         btnPrevBC.style.opacity = "0";
         setTimeout(hidePrevBC, 500);
       }
-      if (offsetBC < 1120) {
+      if (offsetBC < 825) {
         btnNextBC.style.display = "block";
         setTimeout(() => {
           btnNextBC.style.opacity = "1";
@@ -981,13 +926,13 @@ function changingBigCarOffset() {
     btnNextBC.addEventListener("click", slideRightBC);
 
     function slideRightBC() {
-      offsetBC += 390;
-      if (offsetBC >= 1170) {
-        offsetBC = 1170;
+      offsetBC += 280;
+      if (offsetBC >= 1120) {
+        offsetBC = 1120;
         btnNextBC.style.opacity = "0";
         setTimeout(hideNextBC, 500);
       }
-      if (offsetBC >= 390) {
+      if (offsetBC >= 280) {
         btnPrevBC.style.display = "block";
         setTimeout(() => {
           btnPrevBC.style.opacity = "1";
@@ -997,13 +942,71 @@ function changingBigCarOffset() {
     }
 
     function slideLeftBC() {
-      offsetBC -= 390;
-      if (offsetBC < 390) {
+      offsetBC -= 280;
+      if (offsetBC < 280) {
         offsetBC = 0;
         btnPrevBC.style.opacity = "0";
         setTimeout(hidePrevBC, 500);
       }
-      if (offsetBC < 1170) {
+      if (offsetBC < 1120) {
+        btnNextBC.style.display = "block";
+        setTimeout(() => {
+          btnNextBC.style.opacity = "1";
+        }, this.animationDelay + 20);
+      }
+      carouselBC.style.right = offsetBC + "px";
+    }
+  } else if (mq1920.matches) {
+    const btnPrevBC = document.querySelector(".big-carousel__prev-button");
+    const btnNextBC = document.querySelector(".big-carousel__next-button");
+    const carouselBC = document.querySelector(".big-carousel");
+
+    let offsetBC = 0;
+
+    function hideNextBC() {
+      btnNextBC.style.display = "none";
+    }
+
+    function showNextBC() {
+      btnNextBC.style.display = "block";
+    }
+
+    function hidePrevBC() {
+      btnPrevBC.style.display = "none";
+    }
+
+    function showPrevBC() {
+      btnPrevBC.style.display = "block";
+    }
+
+    btnPrevBC.addEventListener("click", slideLeftBC);
+
+    btnNextBC.addEventListener("click", slideRightBC);
+
+    function slideRightBC() {
+      offsetBC += 365;
+      if (offsetBC >= 1095) {
+        offsetBC = 1095;
+        btnNextBC.style.opacity = "0";
+        setTimeout(hideNextBC, 500);
+      }
+      if (offsetBC >= 365) {
+        btnPrevBC.style.display = "block";
+        setTimeout(() => {
+          btnPrevBC.style.opacity = "1";
+        }, this.animationDelay + 20);
+      }
+      carouselBC.style.right = offsetBC + "px";
+    }
+
+    function slideLeftBC() {
+      offsetBC -= 365;
+      if (offsetBC < 365) {
+        offsetBC = 0;
+        btnPrevBC.style.opacity = "0";
+        setTimeout(hidePrevBC, 500);
+      }
+      if (offsetBC < 1095) {
         btnNextBC.style.display = "block";
         setTimeout(() => {
           btnNextBC.style.opacity = "1";
